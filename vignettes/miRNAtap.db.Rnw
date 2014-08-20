@@ -1,0 +1,96 @@
+%\VignetteIndexEntry{miRNAtap.db}
+%\VignetteKeywords{miRNAtap, miRNA, targets}
+%\VignettePackage{miRNAtap.db}
+
+\documentclass{article}
+
+\usepackage{amsmath}
+\usepackage{amscd}
+\usepackage[tableposition=top]{caption}
+\usepackage{ifthen}
+\usepackage{natbib}
+\usepackage[utf8]{inputenc}
+
+\usepackage{Sweave}
+\SweaveOpts{prefix.string = tP}
+
+
+\begin{document}
+\SweaveOpts{concordance=TRUE}
+
+\title{
+{\bf miRNAtap.db}: microRNA Targets - Aggregated Predictions database use}
+\author{Maciej Pajak, Ian Simpson}
+\date{\today}
+
+\maketitle
+\tableofcontents
+\newpage
+
+
+\section{Introduction}
+{\tt miRNAtap.db} package provides annotation data for 
+{\tt miRNAtap} performing target prediction aggregation.
+Aggregation of commonly used prediction algorithm outputs in a way that 
+improves on performance of every single one of them on their own when compared 
+against experimentally derived targets.
+
+Targets are aggregated from 4 most commonly cited prediction algorithms: DIANA 
+\citep{Maragkakis2011}, Miranda \citep{Enright2003}, PicTar \citep{Lall2006} 
+and TargetScan \citep{Friedman2009}.
+
+To read more about miRNA target prediction methods used refer to the 
+{\tt miRNAtap} package vignette available 
+from http://www.bioconductor.org .
+
+
+\section{Installation}
+
+This section briefly describes the necessary steps to get 
+{\tt miRNAtap.db} running on your system. We assume that the user has 
+the R program (see the R project at http://www.r-project.org) already 
+installed and is familiar with it. 
+You will need to have R 3.0.0 or later to be able to install and run 
+{\tt miRNAtap.db}.
+The miRNAtap package is available from the Bioconductor repository 
+at http://www.bioconductor.org To be
+able to install the package one needs first to install the core Bioconductor 
+packages. If you have already
+installed Bioconductor packages on your system then you can skip 
+the two lines below.
+
+<<eval = FALSE>>=
+source("http://bioconductor.org/biocLite.R")
+biocLite()
+@
+
+Once the core Bioconductor packages are installed, we can install the 
+miRNAtap package by
+
+<<eval = FALSE>>=
+source("http://bioconductor.org/biocLite.R")
+biocLite("miRNAtap.db")
+@
+
+\section{Workflow}
+For the information about how to use the miRNA target data refer to the 
+{\tt miRNAtap} package vignette available from 
+http://www.bioconductor.org.
+
+
+\section{Session Information}
+
+<<echo=FALSE,results=tex>>=
+toLatex(sessionInfo())
+@
+
+\addcontentsline{toc}{section}{References} \label{references}
+
+
+\bibliography{refs}
+\bibliographystyle{apalike}
+
+
+
+\end{document}
+

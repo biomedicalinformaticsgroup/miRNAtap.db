@@ -1,0 +1,17 @@
+Package: miRNAtap.db
+Type: Package
+Title: Data for miRNAtap
+Version: 0.99.5
+Author: Maciej Pajak, Ian Simpson
+Maintainer: Maciej Pajak <m.pajak@sms.ed.ac.uk>
+Description: This package holds the database for miRNAtap.
+License: GPL-2
+Depends:
+    miRNAtap
+Imports:
+    AnnotationDbi,
+    DBI,
+    RSQLite,
+    miRNAtap
+biocViews: miRNA, AnnotationData
+Roxygen: list(wrap = FALSE)
